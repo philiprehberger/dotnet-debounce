@@ -8,7 +8,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageId>Philiprehberger.Debounce</PackageId>
-    <Version>0.1.0</Version>
+    <Version>0.1.1</Version>
     <Authors>Philip Rehberger</Authors>
     <Description>Debounce and throttle functions for .NET with configurable delay, leading/trailing edge, and async support.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

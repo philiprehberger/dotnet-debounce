@@ -14,10 +14,11 @@ dotnet add package Philiprehberger.Debounce
 
 ## Usage
 
+### Trailing Edge Debounce
+
 ```csharp
 using Philiprehberger.Debounce;
 
-// Trailing edge debounce (default) — fires after 300ms of quiet
 var debounced = Debounce.Create(() =>
 {
     Console.WriteLine("Saving...");
@@ -26,8 +27,13 @@ var debounced = Debounce.Create(() =>
 debounced.Invoke(); // resets timer
 debounced.Invoke(); // resets timer again
 // "Saving..." fires 300ms after the last Invoke()
+```
 
-// Leading edge debounce — fires immediately, ignores subsequent calls within window
+### Leading Edge Debounce
+
+```csharp
+using Philiprehberger.Debounce;
+
 var leading = Debounce.Create(() =>
 {
     Console.WriteLine("Clicked!");
@@ -35,20 +41,30 @@ var leading = Debounce.Create(() =>
 
 leading.Invoke(); // fires immediately
 leading.Invoke(); // ignored (within 500ms window)
+```
 
-// Async debounce
-var asyncDebounced = Debounce.Create(async () =>
+### Async Debounce with Manual Control
+
+```csharp
+using Philiprehberger.Debounce;
+
+var debounced = Debounce.Create(async () =>
 {
     await SaveToDatabase();
 }, TimeSpan.FromSeconds(1));
 
-await asyncDebounced.InvokeAsync();
+await debounced.InvokeAsync();
 
-// Manual control
 debounced.Cancel(); // cancel pending execution
-debounced.Flush();  // execute immediately if pending
+await debounced.FlushAsync(); // execute immediately if pending
+Console.WriteLine($"Pending: {debounced.IsPending}");
+```
 
-// Throttle — max once per interval
+### Throttle
+
+```csharp
+using Philiprehberger.Debounce;
+
 var throttled = Throttle.Create(() =>
 {
     Console.WriteLine("Processing...");
@@ -56,7 +72,8 @@ var throttled = Throttle.Create(() =>
 
 throttled.Invoke(); // fires
 throttled.Invoke(); // ignored (within 1s)
-// After 1s, next Invoke() will fire again
+throttled.Reset();  // reset the throttle window
+throttled.Invoke(); // fires again
 ```
 
 ## API
