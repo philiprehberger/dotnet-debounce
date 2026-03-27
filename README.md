@@ -3,6 +3,7 @@
 [![CI](https://github.com/philiprehberger/dotnet-debounce/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/dotnet-debounce/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/v/Philiprehberger.Debounce.svg)](https://www.nuget.org/packages/Philiprehberger.Debounce)
 [![License](https://img.shields.io/github/license/philiprehberger/dotnet-debounce)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Debounce and throttle functions for .NET with configurable delay, leading/trailing edge, and async support.
 
@@ -119,4 +120,4 @@ dotnet build src/Philiprehberger.Debounce.csproj --configuration Release
 
 ## License
 
-MIT
+[MIT](LICENSE)
