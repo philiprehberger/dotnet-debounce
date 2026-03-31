@@ -2,8 +2,7 @@
 
 [![CI](https://github.com/philiprehberger/dotnet-debounce/actions/workflows/ci.yml/badge.svg)](https://github.com/philiprehberger/dotnet-debounce/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/v/Philiprehberger.Debounce.svg)](https://www.nuget.org/packages/Philiprehberger.Debounce)
-[![License](https://img.shields.io/github/license/philiprehberger/dotnet-debounce)](LICENSE)
-[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
+[![Last updated](https://img.shields.io/github/last-commit/philiprehberger/dotnet-debounce)](https://github.com/philiprehberger/dotnet-debounce/commits/main)
 
 Debounce and throttle functions for .NET with configurable delay, leading/trailing edge, and async support.
 
@@ -117,6 +116,24 @@ throttled.Invoke(); // fires again
 ```bash
 dotnet build src/Philiprehberger.Debounce.csproj --configuration Release
 ```
+
+## Support
+
+If you find this project useful:
+
+⭐ [Star the repo](https://github.com/philiprehberger/dotnet-debounce)
+
+🐛 [Report issues](https://github.com/philiprehberger/dotnet-debounce/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+
+💡 [Suggest features](https://github.com/philiprehberger/dotnet-debounce/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement)
+
+❤️ [Sponsor development](https://github.com/sponsors/philiprehberger)
+
+🌐 [All Open Source Projects](https://philiprehberger.com/open-source-packages)
+
+💻 [GitHub Profile](https://github.com/philiprehberger)
+
+🔗 [LinkedIn Profile](https://www.linkedin.com/in/philiprehberger)
 
 ## License
 
